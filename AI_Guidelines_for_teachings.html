@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="高級中等以下學校人工智慧使用和學習指引網頁版">
+<title>高級中等以下學校人工智慧使用和學習指引</title>
+<style>
+:root{--bg:#f4f7fb;--paper:#fff;--ink:#233044;--muted:#64748b;--brand:#165d8d;--brand2:#5c3ca3;--line:#dce6ef;--shadow:0 16px 45px rgba(30,64,98,.10);--warn:#fff2bf;--danger:#ffe0e0;--privacy:#e4dcff;--security:#d9f2ff;--integrity:#dff7e5;--verify:#ffe9c9;--rights:#fce0f0;--account:#dcecff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(135deg,#eef5fa,#f8f5ff 55%,#f6fbf8);color:var(--ink);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.95}
+.progress{position:fixed;top:0;left:0;height:5px;background:linear-gradient(90deg,#1d79a8,#784bb8);width:0;z-index:99}
+.hero{padding:70px 24px 48px;background:radial-gradient(circle at 12% 20%,rgba(89,190,220,.26),transparent 28%),radial-gradient(circle at 88% 15%,rgba(128,92,196,.2),transparent 30%),#12364f;color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"AI";position:absolute;right:4vw;bottom:-55px;font-size:210px;font-weight:900;opacity:.055;line-height:1}
+.hero-inner{max-width:1180px;margin:auto;position:relative;z-index:1}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:6px 14px;border-radius:999px;font-weight:700}
+h1{font-size:clamp(2rem,5vw,4rem);line-height:1.25;margin:18px 0 12px;max-width:920px}.subtitle{font-size:1.08rem;opacity:.86}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}button,.btn{border:0;border-radius:12px;padding:11px 16px;font:inherit;font-weight:700;cursor:pointer;background:#fff;color:#173b54;text-decoration:none}button.secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25)}
+.shell{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px;padding:32px 22px 70px}aside{position:sticky;top:20px;height:max-content;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}aside strong{display:block;margin-bottom:10px;color:var(--brand)}nav a{display:block;color:#43556b;text-decoration:none;padding:8px 10px;border-radius:9px;margin:3px 0}nav a:hover{background:#eaf3f8;color:#0d567c}.legend{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:.88rem}.legend span{display:flex;align-items:center;gap:8px;margin:7px 0}.dot{width:13px;height:13px;border-radius:4px;display:inline-block}
+main{min-width:0}.overview{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow);margin-bottom:24px}.overview h2{margin-top:0}.seven{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:18px}.seven div{min-height:100px;padding:12px 8px;border-radius:14px;background:linear-gradient(160deg,#edf7fb,#f3effc);display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:.84rem;font-weight:800}.seven b{font-size:1.35rem;color:var(--brand2)}
+.doc-section{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,4vw,46px);box-shadow:var(--shadow);margin:0 0 25px;scroll-margin-top:20px}h2{font-size:clamp(1.55rem,3vw,2.2rem);color:#174d70;border-bottom:3px solid #d6e8f2;padding-bottom:12px;margin-top:0}h3.role-heading{margin:40px 0 20px;padding:14px 18px;background:linear-gradient(90deg,#eaf5fa,#f3effb);border-left:6px solid var(--brand2);border-radius:10px;font-size:1.35rem;scroll-margin-top:20px}h3.role-heading span{margin-right:10px}h4{font-size:1.12rem;margin:0 0 10px;color:#253b55}.principle-card{display:block;border:1px solid #dce7ef;border-radius:16px;padding:20px 22px;margin:18px 0;background:linear-gradient(180deg,#fff,#fbfdff)}.principle-card .num{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#174d70;color:white;margin-right:10px;font-size:.92rem}p{text-align:justify;margin:12px 0}mark.hl{padding:.08em .18em;border-radius:.35em;color:inherit;font-weight:700}mark.danger{background:var(--danger)}mark.privacy{background:var(--privacy)}mark.security{background:var(--security)}mark.integrity{background:var(--integrity)}mark.verify{background:var(--verify)}mark.rights{background:var(--rights)}mark.account{background:var(--account)}.reference{padding-left:1em;text-indent:-1em;color:#405168}.note{border-left:5px solid #e3a325;background:#fff8db;padding:15px 18px;border-radius:10px;margin:18px 0}footer{text-align:center;color:var(--muted);padding:20px 20px 55px}.top{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border-radius:50%;box-shadow:0 8px 24px rgba(0,0,0,.18);display:none}
+body.large main{font-size:1.12rem}body.dark{--bg:#0d1720;--paper:#152431;--ink:#e5edf3;--muted:#aab9c5;--line:#29404f;--shadow:none;background:#0d1720}body.dark aside{background:rgba(21,36,49,.94)}body.dark nav a{color:#c8d5df}body.dark h2{color:#8fd2f3}body.dark .principle-card{background:#172936}body.dark h3.role-heading{background:#1b3040}body.dark h4{color:#d9e8f2}body.dark .overview{background:#152431}
+@media(max-width:950px){.shell{grid-template-columns:1fr}aside{position:relative;top:auto}nav{display:grid;grid-template-columns:repeat(2,1fr)}.seven{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.hero{padding-top:48px}.shell{padding:18px 10px 50px}.doc-section{border-radius:14px;padding:20px 17px}nav{grid-template-columns:1fr}.seven{grid-template-columns:1fr 1fr}p{text-align:left}}
+@media print{.progress,aside,.hero-actions,.top{display:none!important}body{background:#fff;color:#000}.hero{background:#fff;color:#000;padding:20px 0;border-bottom:2px solid #000}.hero:after{display:none}.shell{display:block;padding:0}.doc-section,.overview{box-shadow:none;border:0;padding:10px 0;break-inside:auto}.principle-card{break-inside:avoid}mark.hl{font-weight:bold;text-decoration:underline;background:transparent!important}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header class="hero"><div class="hero-inner"><span class="eyebrow">教育部指引｜完整網頁版</span><h1>高級中等以下學校人工智慧使用和學習指引</h1><div class="subtitle">中華民國 115 年 6 月 5 日臺教資（一）字第 1152701618 號函核定</div><div class="hero-actions"><a class="btn" href="#intro">開始閱讀</a><button class="secondary" onclick="document.body.classList.toggle('large')">放大文字</button><button class="secondary" onclick="document.body.classList.toggle('dark')">深色模式</button><button class="secondary" onclick="window.print()">列印／存成 PDF</button></div></div></header>
+<div class="shell">
+<aside><strong>章節導覽</strong><nav><a href="#intro">壹、前言</a><a href="#vision">貳、應用願景</a><a href="#principles">參、基本原則</a><a href="#principal">🏫 校長治理</a><a href="#teacher">🧑‍🏫 教師教學</a><a href="#student">🎓 學生學習</a><a href="#parent">👨‍👩‍👧‍👦 家長引導</a><a href="#conclusion">肆、結語</a></nav><div class="legend"><strong>重點色彩</strong><span><i class="dot" style="background:var(--danger)"></i>未成年與不當內容</span><span><i class="dot" style="background:var(--privacy)"></i>個資與隱私</span><span><i class="dot" style="background:var(--security)"></i>資安與網路風險</span><span><i class="dot" style="background:var(--integrity)"></i>揭露與學術誠信</span><span><i class="dot" style="background:var(--verify)"></i>查證與偏誤</span><span><i class="dot" style="background:var(--rights)"></i>著作權與公平</span><span><i class="dot" style="background:var(--account)"></i>責任與問責</span></div></aside>
+<main>
+<section class="overview"><h2>七項核心原則</h2><p>本頁以七項原則為視覺主軸，全文內容仍依原始文件順序完整呈現。</p><div class="seven"><div><b>01</b>永續發展與福祉</div><div><b>02</b>人類自主</div><div><b>03</b>隱私保護與資料治理</div><div><b>04</b>未成年學生保護</div><div><b>05</b>正確使用、透明與可解釋</div><div><b>06</b>倫理、公平與不歧視</div><div><b>07</b>問責</div></div></section>
+<section class="doc-section" id="intro"><h2>壹、前言</h2>
+<p>數位科技時代，高級中等以下學校實踐數位學習的運用，已是教師與學生的日常，本部參酌國外經驗，重視校長、教師及家長的角色，將數位學習從教室延伸到家庭，完備學校領導、課程、教學與親職等面向，114年因應人工智慧浪潮，加以擴充、增列人工智慧輔助教學、學習等內涵，完成研編《數位教學指引》、《校長數位學習領導指引》及《家長數位學習知能指引》等3本指引、《生成式人工智慧學習應用手冊》及注意事項等文件，打造「學生安心、教師專心、家長放心」的學習環境。各文件摘要重點說明如下：</p>
+<h3 class="role-heading"><span>◆</span>一、教師數位教學指引</h3>
+<p>協助教師在備課、教學與評量中適切運用人工智慧與各類科技工具，透過明確使用規範與教學引導，落實未成年保護與正確使用觀念，並融入資訊倫理教育，培養學生辨識資訊與負責任應用的能力，同時說明生成式人工智慧的應用時機、風險與注意事項，強化隱私與資料保護意識，並以教學示例與支持系統協助教師在多元情境中安全、合宜且有效地運用人工智慧。</p>
+<h3 class="role-heading"><span>◆</span>二、校長數位學習領導指引</h3>
+<p>著重強化校長推動數位學習的願景與治理能力，透過建立數位學習政策、資源整合與支持系統，呼應人工智慧使用與學習的永續發展、人類自主與<mark class="hl account">問責</mark>等基本原則，並藉由校內使用規範與風險管理措施，落實未成年保護與正確使用，引導師生在適切情境中運用人工智慧，同時強調倫理教育與隱私、資料治理，以確保學校推動人工智慧應用的安全性與信賴性</p>
+<h3 class="role-heading"><span>◆</span>三、家長數位學習知能指引</h3>
+<p>透過營造良好的家庭數位學習與人工智慧學習環境與陪伴策略，強化學習支持與親師合作，在日常互動中落實未成年保護與正確使用，引導孩子善用數位平臺與人工智慧工具，避免過度依賴與不當接觸；同時培養數位素養與資訊倫理，引導孩子辨識資訊、負責任使用科技，並在學習平臺與資料處理過程中重視隱私與資料保護，形塑安全可信且具成效的人工智慧學習環境。</p>
+<h3 class="role-heading"><span>◆</span>四、學生生成式人工智慧學習應用手冊</h3>
+<p>依小學、國中、高中不同階段設計學習內容與情境任務，引導學生在探索與應用人工智慧時建立責任意識，呼應人類自主與永續發展原則；內容涵蓋資料辨識、提問技巧與生成內容檢核，落實資訊倫理與正確使用並強調未成年保護，避免過度依賴與不當接觸，並透過手冊案例強化隱私與資料保護意識，培養學生揭露使用歷程、辨識<mark class="hl verify">偏誤</mark>與風險的能力，促進安全、可信且具學習成效的人工智慧應用。</p>
+<h3 class="role-heading"><span>◆</span>五、中小學使用生成式人工智慧注意事項</h3>
+<p>提醒安全、倫理與合宜使用，透過情境說明與具體規範，引導在學習與生活中落實正確使用，並強化未成年保護與適齡陪伴；內容涵蓋資訊倫理判斷、生成內容<mark class="hl verify">查證</mark>與<mark class="hl verify">偏誤</mark>辨識，協助避免誤用與濫用，同時重視隱私安全與<mark class="hl privacy">個資</mark>保護，培養負責任之人工智慧應用態度。</p>
+</section>
+<section class="doc-section" id="vision"><h2>貳、人工智慧與數位學習應用願景</h2>
+<p>在十二年國教課綱與國際數位素養發展下，學校教學已從單向知識傳遞，轉向強調運算思維、合作共創、溝通表達與數位倫理等核心能力。學生透過數位工具與人工智慧（含生成式人工智慧）進行自主學習、探究實作與專題導向學習，學習歷程中同時</p>
+<p>關注數位公民責任與法律權益。人工智慧技術更提供個人化與適性化學習機會，教師在各領域與跨領域課程中運用人工智慧輔助教學，引導學生在體驗、實作、應用與創作中培養數位素養、進行線上學習，成為能在真實情境中運用科技的終身學習者。學校推動人工智慧與數位學習的願景，是建構安全、以人為本且兼顧社會福祉與環境永續的學習環境，使每一位學生都能在數位平權的前提下，善用人工智慧提升學習成效與生活品質。透過適當課程設計與教師專業引導，讓學生理解人工智慧的原理、潛能與風險，培養批判思考與負責任使用態度。同時，學校應強化資料保護、<mark class="hl security">資安</mark>與倫理教育，讓教師與學生在運用人工智慧時，能尊重人類自主與多元文化價值，避免落入偏見與<mark class="hl rights">歧視</mark>，促進個人與社會整體的永續發展。</p>
+</section>
+<section class="doc-section" id="principles"><h2>參、人工智慧使用與學習之基本原則</h2>
+<p>本原則重視未成年人之身心發展與保護，強調於適當引導與陪伴下使用人工智慧，避免不當接觸與過度依賴；同時融入資訊倫理觀念，培養正確使用態度與責任意識。於資料處理與系統應用過程中，兼顧<mark class="hl privacy">隱私保護</mark>與<mark class="hl security">資訊安全</mark>，確保資料運用之合理性與安全性，並透過透明、可解釋、公平及<mark class="hl account">問責</mark>等機制，促進人工智慧於教育場域之正向發展與健全應用。依據「人工智慧基本法」（115年1月公布）第4條所揭示之核心精神及七項原則，並融合前開數位學習各項指引、人工智慧相關手冊及文件，於兼顧數位平權、學習權益、促進教學創新研發與培養下世代人才前提下，分別就學校之校長、教師、學生及家長，引導其安全、合宜且負責任地使用人工智慧之基本原則，作為學校推動人工智慧教育、輔導學生學習、教師教學與專業成長、校長校務治理與領導，以及家長陪伴孩子的參考。</p>
+<h3 class="role-heading" id="principal"><span>🏫</span>一、校長領導與校務治理方面</h3>
+<article class="principle-card"><h4><span class="num">(一)</span>永續發展與福祉</h4>
+<p>學校導入人工智慧時，宜兼顧學生福祉、教育公平及教育體系之永續發展，避免因資源、設備、語言、能力或家庭背景差異而擴大數位落差。學校可逐步建置相關學習環境與支持機制，包括教學設計、學習資源、風險控管及人員培訓，建立可持續推動之人工智慧教育環境，以促進學生適應人工智慧時代之學習與生活需求。學校在推動人工智慧相關應用與學習時，應以學生整體福祉與學校永續發展為核心，避免為追求科技新穎而忽略教育本質。可結合學校願景與課程發展，規劃有助於提升學習成效、縮短城鄉與資源落差的人工智慧應用，同時關注弱勢與多元族群的需求，使人工智慧成為促進教育機會均等與社會福祉的工具。學校亦應引導教師與學生理解人工智慧對環境、社會與未來職涯的影響，培養負責任的數位素養，讓學校在數位轉型中兼顧創新與永續。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(二)</span>人類自主</h4>
+<p>人工智慧於學校教育場域中應定位為輔助工具，而非取代學生學習、教師專業判斷或學校教育責任之機制。學校應強調「以人為中心」的原則，確保教學決策、評量判斷與學生學習歷程的關鍵環節仍由專業教育人員掌握。學校在導入自動化評量、學習分析或推薦系統時，需保留教師專業裁量與學生選擇空間，避免形成對演算法的過度依賴。學校也應推動教師與學生理解人工智慧系統的限制與<mark class="hl verify">偏誤</mark>風險，培養批判思考與負責任使用態度，使學習者在人工智慧環境中維持主體性與判斷力，而非被動接受系統建議。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(三)</span>隱私保護與資料治理</h4>
+<p>學校於選用人工智慧工具時，須審慎評估其資料蒐集、</p>
+<p>儲存、使用與傳輸機制，並建立適切之管理與審查機制。學校在規劃人工智慧與數位學習環境時，需將學生<mark class="hl privacy">個資</mark>與學習歷程資料視為高度敏感資訊，建立清楚的蒐集、使用、儲存與刪除規範。導入第三方平臺或人工智慧服務前，應審視其資料處理方式與<mark class="hl privacy">跨境傳輸</mark>風險，避免不當分享或商業濫用。學校應訂定內部資料治理流程，明確權責分工，並向教師、學生與家長說明資料用途與權利，包含查詢、更正與撤回同意等機制。學校亦應推動相關教育，提升全校對<mark class="hl privacy">隱私保護</mark>與資料安全的敏感度與專業度。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(四)</span>未成年學生保護（含資安與安全）</h4>
+<p>學校推動人工智慧相關學習與應用時，以保障未成年學生之身心安全與最佳利益為首要考量，並兼顧學生福祉、社會公平及教育永續。人工智慧於教育情境中，優先選用具教育目的且經評估具備安全機制之工具，並依學生年齡與學習階段設計適切之使用方式與情境。面對人工智慧與雲端服務廣泛應用，學校需將<mark class="hl security">資安</mark>視為校務治理的重要一環，建立預防、監測與通報機制，降低<mark class="hl security">帳號外洩</mark>、<mark class="hl security">惡意攻擊</mark>與系統中斷對教學的影響。對未成年學生，更須關注其在使用生成式人工智慧、聊天機器人或開放平臺時，可能接觸到<mark class="hl danger">不當內容</mark>、<mark class="hl danger">詐騙</mark>或<mark class="hl danger">網路霸凌</mark>等風險。學校應訂定清楚的使用規範與分級管理措施，搭配數位公民與網路安全教育，培養學生辨識風險與自我保護能力。學校並應定期檢視設備與系統安全，確保校園人工智慧環境穩定可靠。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(五)</span>正確使用、透明與可解釋</h4>
+<p>學校須明確界定人工智慧可使用與不可使用之學習情境，並納入<mark class="hl integrity">學術誠信</mark>規範。學校有建立人工智慧使用分工與管理機制之責任，明確界定教師、學生及行政人員之責任範</p>
+<p>圍，確保使用過程具可追溯性與可管理性。學校在導入或推廣人工智慧系統時，應確保其運作邏輯、主要功能與可能限制能以可理解的方式向教師、學生與家長說明，避免形成「黑箱決策」。對於涉及學習診斷、評量或學生分組等敏感應用，更需提供適當的說明管道，讓利害關係人了解系統依據與誤差可能。校長可鼓勵教師在課程中引導學生探討人工智慧的運作原理與可解釋性議題，培養對演算法結果的理解與質疑能力，使人工智慧在校園中的使用更具透明度與信任基礎。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(六)</span>人工智慧倫理、公平與不歧視</h4>
+<p>學校可將人工智慧使用納入資訊倫理與<mark class="hl integrity">學術誠信</mark>教育中，建立清楚之使用規範與行為準則。學校於導入人工智慧時，需考量不同年齡、能力、語言背景及身心條件學生之需求，確保學習機會之公平性，避免產生新的教育不平等。學校應注意人工智慧系統可能因訓練資料或設計偏差，對特定性別、族群、身心障礙或弱勢學生產生不公平結果。學校在選用學習平臺、推薦系統或評量工具時，需審視其是否可能放大既有差距，並透過多元管道蒐集教師與學生的使用回饋，及早發現不公平現象。學校也應推動以公平為核心的數位學習政策，例如提供必要設備與支援，避免因人工智慧與數位落差造成新的教育不平等，確保每位學生都能在安全與尊重的環境中受惠於人工智慧。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(七)</span>問責</h4>
+<p>學校在人工智慧相關決策與實施過程中，需建立清楚的責任鏈與治理架構，包含決策依據、審議程序與風險評估紀錄，確保出現問題時可追溯與檢討。對於人工智慧應用造成的學習爭議、資料外洩或<mark class="hl danger">不當內容</mark>等事件，學校應有明確的</p>
+<p>處理流程與對外溝通機制，展現負責態度。學校也應定期檢視人工智慧與數位學習政策的成效與風險，必要時調整或停止特定應用，並透過專業成長與社群交流，持續精進自身在人工智慧治理與<mark class="hl account">問責</mark>上的領導能力。</p>
+</article>
+<h3 class="role-heading" id="teacher"><span>🧑‍🏫</span>二、教師教學與專業成長方面</h3>
+<article class="principle-card"><h4><span class="num">(一)</span>永續發展與福祉</h4>
+<p>教師在規劃與使用人工智慧相關教學活動時，應思考如何藉由科技促進學生學習成效、身心健康與社會福祉，同時兼顧環境永續與數位平權。在課程中可引導學生探討人工智慧對社會、環境與職涯的影響，培養其理解科技對社會包容與環境的正負面效果。教師應注意不同教育階段學生的身心發展，合理安排螢幕使用時間與線上學習負荷，避免過度依賴數位工具造成視力、睡眠或心理壓力問題。同時，教師在課程設計上應考量資源差異，提供替代方案或校內支援，減少因設備或網路落差造成的學習不平等。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(二)</span>人類自主</h4>
+<p>教師於教學、評量或行政決策中使用人工智慧時，應維持人類監督與專業判斷，人工智慧僅作為支援工具，而非取代教師或學生的思考與決策，確保相關應用符合教育目的、學生權益及以人為本之精神。在課堂中，教師可示範如何與生成式人工智慧互動，強調學生需主動提問、分析與評估，而非被動接受系統輸出。教師在評量設計上，宜增加需要高層次思考、反思與創作的任務，避免學生只依賴人工智慧產出答案。此外，教師應尊重學生在使用人工智慧上的選擇與節奏，鼓勵學生表達對人工智慧工具的疑慮與觀點，培養其在科技環境中維持自主權與人格尊嚴的能力。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(三)</span>隱私保護與資料治理</h4>
+<p>教師在使用各類人工智慧平臺或數位工具時，應避免上傳含有學生<mark class="hl privacy">姓名、學號、聯絡方式、健康或家庭背景</mark>等<mark class="hl privacy">個人資料</mark>，並提醒學生不要在與生成式人工智慧對話中透露<mark class="hl privacy">個資</mark>或學校敏感資訊。教師應理解並遵守相關<mark class="hl privacy">個資</mark>與<mark class="hl privacy">隱私保護</mark>法規，採取<mark class="hl privacy">資料最小化</mark>原則，只蒐集與教學目的必要且適當的資料。在課堂中，教師可融入「網路身分管理」與「<mark class="hl privacy">隱私保護</mark>」等主題，讓學生學習如何管理自己的數位足跡、辨識<mark class="hl danger">網路霸凌</mark>與<mark class="hl danger">數位性別暴力</mark>風險，並尊重他人資料與<mark class="hl rights">著作權</mark>。同時，教師應妥善管理教學紀錄與學習歷程檔案，避免未經授權分享或公開。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(四)</span>未成年學生保護（含資安與安全）</h4>
+<p>教師在選用人工智慧工具與數位平臺時，應優先考量其<mark class="hl security">資安</mark>防護與資料處理機制，避免使用來源不明或有惡意軟體風險的服務。在教學中，教師需培養學生基本的<mark class="hl security">資訊安全</mark>意識，如設定<mark class="hl security">強密碼</mark>、避免點擊<mark class="hl security">可疑連結</mark>、謹慎下載檔案等，並說明人工智慧可能帶來的新型威脅，例如<mark class="hl security">深偽影像</mark>、假訊息與<mark class="hl security">釣魚攻擊</mark>。對於未成年學生，教師更應注意其接觸內容的適齡性，避免學生透過人工智慧工具接觸<mark class="hl danger">暴力、色情或仇恨言論</mark>等不當資訊，並建立班級使用規範與家長溝通機制，共同守護學生身心安全。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(五)</span>正確使用、透明與可解釋</h4>
+<p>教師於教學現場運用人工智慧時，依課程目標與學生學習需求，審慎安排使用方式，使其發揮教學支持功能，而非取代教學或評量判斷。教師在課堂中使用人工智慧工具時，應向學生與家長清楚說明使用目的、方式與可能限制，並在作業或評量中要求學生標註使用之生成式人工智慧名稱、版本與<mark class="hl integrity">對話歷程</mark>，以提升過程透明度。教師自身也應理解常用</p>
+<p>人工智慧工具的基本運作原理與可能<mark class="hl verify">偏誤</mark>，避免將人工智慧輸出視為「黑箱」或絕對正確，並在教學中示範如何檢視與追問人工智慧產出的理由與依據。當人工智慧系統被用於學習診斷或學習歷程分析時，教師應能向學生說明其判斷邏輯與可能誤差，讓學生理解這些結果僅供參考，而非唯一標準。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(六)</span>人工智慧倫理、公平與不歧視</h4>
+<p>教師在使用人工智慧輔助教學或評量時，應注意演算法可能對特定性別、族群、身心狀況或社經背景的學生產生不公平結果，避免將帶有偏見的輸出直接用於分組、評分或標籤學生。在課堂中，教師可引導學生討論人工智慧<mark class="hl verify">偏誤</mark>的案例，培養其辨識與反思能力，理解資料來源與設計者觀點如何影響人工智慧判斷。教師在設計數位學習活動時，應提供多元表現方式與彈性支持，讓不同能力與背景的學生都能參與受益，避免因設備、語言或操作能力差異而被排除在人工智慧學習活動之外。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(七)</span>問責</h4>
+<p>教師在教學中採用人工智慧產出的內容或建議時，應以自身專業進行審查與調整，對於選用與呈現的教材負<mark class="hl account">最終責任</mark>，而非將錯誤或<mark class="hl danger">不當內容</mark>歸咎於系統。教師可與學生共同訂定班級人工智慧使用規範，說明若在作業或報告中使用人工智慧，需<mark class="hl integrity">誠實揭露</mark>並為採用內容負責，避免<mark class="hl integrity">抄襲</mark>或學術不誠信。同時，教師應持續精進自身人工智慧素養，參與專業成長社群，分享經驗與反思，建立學校層級的治理與支持機制，確保人工智慧應用符合教育目標與社會期待。</p>
+</article>
+<h3 class="role-heading" id="student"><span>🎓</span>三、學生學習方面</h3>
+<p>以下七項基本原則，供教師在課堂上引導學生理解與實踐，協助學生成為負責任的人工智慧使用者與學習者。</p>
+<article class="principle-card"><h4><span class="num">(一)</span>永續發展與福祉</h4>
+<p>學生在使用人工智慧與數位工具學習時，應留意自身身心健康與生活平衡，避免長時間盯著螢幕或過度依賴線上互動，影響睡眠、視力與人際關係。在教師引導下，學生可思考人工智慧在環境保護、醫療照護、交通與社會服務等面向的應用，理解科技如何促進或阻礙社會福祉與環境永續。學生也應學習善用人工智慧提升學習效率與生活品質，例如用於語言練習、資料整理或創意發想，同時維持適當休息與實體活動，培養健康的數位生活型態。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(二)</span>人類自主</h4>
+<p>學生在與生成式人工智慧互動時，<mark class="hl verify">不應只是複製貼上</mark>系統產出，而要主動提問、比較多方資料並做出自己的判斷，為最終決定負責。學生應理解人工智慧是輔助工具，無法完全取代人類的價值判斷、創造力與同理心，因此在完成作業或專題時，仍需投入個人思考與反省。在學習過程中，學生可將人工智慧視為學習夥伴，透過對話獲得不同觀點，但也要保有質疑與修正的能力，<mark class="hl verify">避免盲從</mark>系統建議。教師可鼓勵學生分享自己與人工智慧互動的經驗，討論如何在科技環境中維持自主與負責態度。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(三)</span>隱私保護與資料治理</h4>
+<p>學生在使用人工智慧聊天機器人、學習平臺或各類App時，應避免提供真實<mark class="hl privacy">姓名、地址、電話、學校名稱、帳號密碼</mark>等個人敏感資訊，並了解這些資料一旦外洩可能帶來的風險。學生需學習管理自己的網路身分，包含設定適當的暱稱與頭像、謹慎公開照片與影片，並尊重他人隱私，不任意轉傳同學或師長的影像與對話紀錄。在教師引導下，學生也應理解資料在人工智慧訓練中的角色，認識<mark class="hl privacy">資料最小化</mark>與合法</p>
+<p>授權的重要性，避免違反<mark class="hl rights">著作權</mark>或<mark class="hl rights">未經同意</mark>使用他人作品作為訓練或上傳內容。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(四)</span>未成年學生保護（含資安與安全）</h4>
+<p>學生應具備基本的<mark class="hl security">資訊安全</mark>觀念，例如不隨意下載<mark class="hl security">來路不明</mark>的程式、不點擊<mark class="hl security">可疑連結</mark>、不在公共電腦儲存帳號密碼，並定期更新裝置與應用程式，以降低遭駭或中毒風險。在使用人工智慧工具時，學生需警覺可能出現的假訊息、<mark class="hl security">深偽影像</mark>或冒名帳號，遇到可疑內容應主動向師長求證，不輕易轉傳。對於未成年學生，特別要避免接觸<mark class="hl danger">不當內容</mark>或與陌生人進行具風險的互動，若在人工智慧或網路環境中遭遇<mark class="hl danger">騷擾、霸凌</mark>或不舒服情境，應立即向師長或家長求助。教師可透過案例討論與模擬情境，協助學生建立自我保護與求援的具體策略。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(五)</span>正確使用、透明與可解釋</h4>
+<p>學生在作業、報告或專題中若有使用生成式人工智慧協助構思、撰寫或整理資料，應主動在作品中<mark class="hl integrity">標註所使用</mark>的<mark class="hl integrity">工具名稱、版本與使用方式</mark>，<mark class="hl integrity">不得將人工智慧生成內容直接作為個人原創成果繳交</mark>，並在需要時提供部分對話或操作紀錄，展現誠信與負責態度。學生也應學習向人工智慧「追問」，了解系統給出答案的可能依據與限制，意識到人工智慧<mark class="hl verify">並非全知全能</mark>，且可能因訓練資料或演算法設計而產生<mark class="hl verify">偏誤</mark>。在教師引導下，學生可練習將人工智慧提供的內容重新整理、用自己的話說明與反思，提升對資訊來源與推理過程的理解，而非僅停留在表面使用。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(六)</span>人工智慧倫理、公平與不歧視</h4>
+<p>學生應具備數位公民責任，避免散布不實資訊，並能辨識<mark class="hl rights">歧視</mark>、霸凌、仇恨、暴力或不尊重他人之內容。學生在使</p>
+<p>用人工智慧工具時，應留意系統輸出是否對特定性別、族群、文化、身心狀況或職業有<mark class="hl rights">刻板印象</mark>或不公平描述，並在課堂討論中提出質疑與反思。教師可引導學生觀察教材、圖片或故事生成結果中可能存在的偏見，討論其成因與影響，培養尊重多元與包容差異的態度。在合作學習或線上互動時，學生也應避免以人工智慧產出內容作為嘲笑或排斥同學的工具，不以科技強化既有<mark class="hl rights">歧視</mark>或霸凌行為。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(七)</span>問責</h4>
+<p>學生在學習歷程中使用人工智慧時，需<mark class="hl account">為自己的選擇與行為負責</mark>，包括：是否適當引用人工智慧內容、是否有標明來源、是否有進一步<mark class="hl verify">查證</mark>與修正錯誤資訊等。若因未經<mark class="hl verify">查證</mark>而轉傳不實訊息、<mark class="hl integrity">抄襲</mark>人工智慧產出或違反隱私與<mark class="hl rights">著作權</mark>，學生應在教師引導下學習承擔後果並進行修正，理解<mark class="hl account">問責</mark>是數位公民的重要素養。學生也應主動回饋在使用人工智慧過程中遇到的問題與風險，與教師及同學共同討論改進方式，參與班級或學校人工智慧使用規範的形成，從中學習個人責任與集體責任的平衡。</p>
+</article>
+<h3 class="role-heading" id="parent"><span>👨‍👩‍👧‍👦</span>四、家長認知與子女引導方面</h3>
+<article class="principle-card"><h4><span class="num">(一)</span>永續發展與福祉</h4>
+<p>家長在陪伴子女使用人工智慧與數位工具時，應以孩子的整體福祉與長遠發展為優先，避免只追求成績或效率，而忽略身心健康與生活平衡。可與學校合作，了解人工智慧在學習上的正向應用，如個別化學習、輔助練習與多元表達，同時關注螢幕時間、睡眠與人際互動，協助孩子建立健康的數位生活習慣。家長也可藉由日常對話，引導孩子思考人工智慧對社會、環境與未來工作的影響，培養關懷他人與社會的價值觀，使科技成為促進家庭與社會福祉的助力。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(二)</span>人類自主</h4>
+<p>家長應向子女說明，人工智慧是協助學習與生活的工具，而不是替代思考的「答案機」，鼓勵孩子在使用人工智慧後仍要自己檢視與判斷內容。在孩子完成作業或報告時，可提醒其先自行構思，再運用人工智慧查詢或發想，並與孩子討論「為何採用或不採用」人工智慧的建議，讓孩子理解自己才是決策的主體。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(三)</span>隱私保護與資料治理</h4>
+<p>家長應協助孩子認識<mark class="hl privacy">個人資料</mark>的重要性，提醒不要在人工智慧聊天機器人、學習平臺或社群媒體中隨意透露<mark class="hl privacy">姓名、學校、住址、電話、照片</mark>等敏感資訊。可與孩子一起檢視常用App與平臺的隱私設定，說明為何要限制定位、相機或通訊錄的存取權限，並討論資料一旦被蒐集與分析，可能帶來的廣告推播或風險。家長也應尊重孩子的合理隱私，不隨意公開其照片或學習成果，並在需要使用孩子資料時先取得同意，以身作則示範資料治理與隱私尊重的態度。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(四)</span>未成年學生保護（含資安與安全）</h4>
+<p>家長在家中建立使用人工智慧與網路的基本安全規範，主動為孩子把關，選擇具備安全過濾機制且適齡的平臺，定期檢查學習載具與相關配件，確保系統與軟體版本更新及安裝防毒軟體，以防範<mark class="hl security">資安</mark>風險，如不下載<mark class="hl security">來路不明</mark>程式、不點擊<mark class="hl security">可疑連結</mark>、不將帳號密碼告訴他人，並與孩子一起設定<mark class="hl security">強密碼</mark>與定期更新習慣。對未成年子女，家長應特別留意其透過人工智慧工具可能接觸到暴力、色情、仇恨言論或<mark class="hl danger">詐騙</mark>訊息，可採取適齡內容過濾與陪伴使用的方式，並鼓勵孩子遇到不舒服或可疑情況時，主動向家長求助。家長也可與學校保持溝通，了解校園<mark class="hl security">資安</mark>與人工智慧使用規範，共同守護</p>
+<p>孩子在校內外的數位安全。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(五)</span>正確使用、透明與可解釋</h4>
+<p>家長在與孩子討論人工智慧使用時，可主動說明自己為何選擇某些學習平臺或工具，例如因為功能、安全性或學校推薦，讓孩子理解科技選擇背後的理由。當孩子使用人工智慧完成作業或查詢資料時，家長可請孩子說明「人工智慧怎麼說」「你怎麼想」，引導其區分系統輸出與個人觀點，並一起檢視資訊來源是否可靠、和孩子一起練習使用簡單的<mark class="hl verify">查證</mark>工具驗證真偽。家長不需精通技術細節，但可透過簡單比喻，讓孩子理解人工智慧是根據大量資料「推測」答案，<mark class="hl verify">可能會錯</mark>，培養孩子對人工智慧結果保持理解與質疑的態度。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(六)</span>人工智慧倫理、公平與不歧視</h4>
+<p>家長應協助孩子辨識技術背後的<mark class="hl verify">偏誤</mark>，並培養友善人際情懷和尊重多元聲音的態度，保持尊重和友善的互動方式。留意人工智慧內容中可能出現的<mark class="hl rights">刻板印象</mark>或偏見，例如對性別、族群、職業或身心狀況的不公平描述，並與孩子討論這些內容為何不恰當。可鼓勵孩子分享在使用人工智慧繪圖、故事生成或搜尋時看到的例子，一起思考資料與設計者觀點如何影響結果。家長也應關注家庭在設備與網路資源上的條件，盡可能為孩子提供基本的數位學習工具，或與學校討論可行的支援方式，避免因資源差距讓孩子在人工智慧與數位學習上處於不利位置。</p>
+</article>
+<article class="principle-card"><h4><span class="num">(七)</span>問責</h4>
+<p>家長在陪伴孩子使用人工智慧學習時，應強調「<mark class="hl account">使用者要為自己的選擇負責</mark>」，包括是否<mark class="hl verify">查證</mark>資訊、是否標明人工智慧協助、是否尊重他人<mark class="hl rights">著作權</mark>與隱私。當孩子因未經<mark class="hl verify">查證</mark>而轉傳不實訊息、<mark class="hl integrity">抄襲</mark>人工智慧產出或在網路上做出不當行</p>
+<p>為時，家長可在理解與支持的前提下，引導其面對後果、道歉與修正，而非完全歸咎於科技。家長也應持續學習相關知識，主動與學校溝通人工智慧與數位學習政策，共同承擔培養孩子成為負責任數位公民的角色。</p>
+</article>
+</section>
+<section class="doc-section" id="conclusion"><h2>肆、結語</h2>
+<p>在人工智慧快速發展的今日，本指引期盼成為高級中等以下學校的重要依據，協助學校在課程設計、教學實施與校務治理中，善用人工智慧帶來的創新契機，同時守護學生的學習權益與身心發展。透過明確的原則與實務指引，教師得以精進專業、提升教學品質；校長得以形塑具前瞻性的校園願景與治理模式；家長得以成為孩子安心探索科技世界的堅實後盾；學生則能在數位平權的基礎上，培養負責任使用科技的素養與面對未來的關鍵能力。未來，隨著科技與教育現場持續演變，本指引亦將滾動檢視與精進，與第一線教育工作者及家長共同打造安全、負責且具創造力的人工智慧學習環境。</p>
+<p>[附記]教育部各項指引及相關配套文件如下，電子檔登載於本部推動中小學數位學習精進方案入口網/資料下載(https://pads.moe.edu.tw/download.php)</p>
+<p class="reference">【1】教育部(2025)。中小學數位教學指引。</p>
+<p class="reference">【2】教育部(2025)。中小學校長數位學習領導指引。</p>
+<p class="reference">【3】教育部(2025)。中小學家長數位學習知能指引。</p>
+<p class="reference">【4】國家科學及技術委員會(2026)。人工智慧基本法。</p>
+<p class="reference">【5】教育部(2026)。中小學使用「生成式人工智慧」注意事項（教</p>
+<p>師、行政人員及家長版）。</p>
+<p class="reference">【6】教育部(2026)。中小學使用「生成式人工智慧」注意事項（學生版）</p>
+<p>。</p>
+<p class="reference">【7】教育部(2025)。中小學生成式人工智慧學習應用手冊。</p>
+</section>
+</main></div>
+<button class="top" id="top" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂端">↑</button>
+<footer>網頁內容依教育部「高級中等以下學校人工智慧使用和學習指引」製作；色彩標示僅供閱讀辨識，不改變原文意義。</footer>
+<script>
+const progress=document.getElementById('progress'),topBtn=document.getElementById('top');
+addEventListener('scroll',()=>{const h=document.documentElement;progress.style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight))*100)+'%';topBtn.style.display=h.scrollTop>600?'block':'none';});
+</script>
+</body></html>
