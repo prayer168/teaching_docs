@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEL Supported Group Inquiry Learning</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --paper: #ffffff;
+      --text: #1f2937;
+      --muted: #64748b;
+      --accent: #2563eb;
+      --accent-soft: #e0ecff;
+      --border: #dbe3ef;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 32rem),
+        linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    .wrap {
+      width: min(980px, calc(100% - 32px));
+      margin: 48px auto;
+    }
+
+    header {
+      padding: 36px 28px 28px;
+      background: linear-gradient(135deg, #1d4ed8, #38bdf8);
+      color: #fff;
+      border-radius: 26px 26px 0 0;
+      box-shadow: var(--shadow);
+    }
+
+    header .label {
+      display: inline-block;
+      padding: 6px 12px;
+      margin-bottom: 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.85rem, 4vw, 3rem);
+      line-height: 1.35;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .subtitle {
+      margin-top: 14px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 1.05rem;
+    }
+
+    main {
+      background: var(--paper);
+      padding: 34px clamp(22px, 5vw, 56px) 48px;
+      border: 1px solid var(--border);
+      border-top: 0;
+      border-radius: 0 0 26px 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .info-card {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(37, 99, 235, 0.16);
+      color: #1e3a8a;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    article {
+      font-size: 1.08rem;
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0 0 1.28em;
+      text-align: justify;
+    }
+
+    .date {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: right;
+      font-weight: 700;
+    }
+
+    @media (max-width: 760px) {
+      .wrap {
+        width: min(100% - 20px, 980px);
+        margin: 20px auto;
+      }
+
+      header {
+        padding: 28px 20px 24px;
+        border-radius: 20px 20px 0 0;
+      }
+
+      main {
+        padding: 26px 20px 36px;
+        border-radius: 0 0 20px 20px;
+      }
+
+      .info-box {
+        grid-template-columns: 1fr;
+      }
+
+      article {
+        font-size: 1rem;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .wrap {
+        margin: 0;
+        width: 100%;
+      }
+
+      header,
+      main {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="label">SEL × Group Inquiry Learning</div>
+      <h1>SEL支持下的分組探究學習模式對學生探究能力、合作品質與科學態度之影響</h1>
+      <div class="subtitle">社會情緒學習融入自然科學探究與科展指導之教學觀點</div>
+    </header>
+
+    <main>
+      <section class="info-box" aria-label="核心面向">
+        <div class="info-card">探究能力</div>
+        <div class="info-card">合作品質</div>
+        <div class="info-card">科學態度</div>
+      </section>
+
+      <article>
+        <p>SEL支持下的分組探究學習模式對學生探究能力、合作品質與科學態度之影響</p>
+
+        <p>我認為，SEL 支持下的分組探究學習模式，對學生的探究能力、合作品質與科學態度都有正向影響。所謂 SEL，也就是社會情緒學習，並不是在自然課或科學探究之外，另外再增加一堂情緒教育課，而是將自我覺察、情緒調節、人際理解、溝通合作與負責任的決定，融入學生實際的探究歷程之中。當學生在一個比較安全、被尊重、可以犯錯也可以修正的學習環境裡進行分組探究時，他們比較能真正投入問題發現、實驗設計、資料蒐集、討論分析與反思修正的過程。</p>
+
+        <p>首先，在探究能力方面，SEL 能幫助學生建立比較穩定且安全的學習狀態。自然科學的探究並不是一次操作就能得到正確答案，而是需要不斷觀察、提出問題、形成假設、設計實驗、控制變因、紀錄資料，最後再根據結果進行討論與修正。學生如果害怕講錯、怕被同學否定，或是在實驗失敗時只感受到挫折，就很難真正進入探究。因此，SEL 的支持可以讓學生比較敢提出自己的想法，也比較願意說出疑問。很多好的探究題目，其實都來自孩子生活中很直覺、很真實的問題。如果班級氣氛是安全的，學生就比較願意問「為什麼會這樣？」、「如果換一種材料會不會不同？」、「是不是還有其他原因？」這些問題，正是科學探究的重要起點。</p>
+
+        <p>其次，SEL 也能幫助學生面對失敗與修正。在探究活動中，實驗結果不明顯、紀錄不完整、材料操作失誤、組員意見不同，都是很常見的情況。如果沒有適當的情緒支持，學生很容易把失敗歸咎於某個同學，或是乾脆放棄。但是在 SEL 支持下，老師可以引導學生先穩定情緒，再回到問題本身，討論是哪個變因沒有控制好、哪個步驟需要重新調整、資料是否需要再蒐集一次。這樣一來，學生就會逐漸理解，科學探究中的失敗不是結束，而是修正研究設計與深化理解的機會。這種能夠從錯誤中調整的能力，本身就是非常重要的探究能力。</p>
+
+        <p>在合作品質方面，SEL 對分組探究學習也有明顯的幫助。分組活動如果只停留在形式上的分工，很容易變成能力較強的學生負責全部工作，其他學生只是旁觀或被動配合。透過 SEL 的引導，學生比較能理解自己在小組中的角色與責任，也能看見不同組員的貢獻。自然探究活動中，有人可能負責操作實驗，有人負責觀察紀錄，有人負責拍照，有人負責整理資料，也有人負責上台報告。這些工作沒有高低之分，都是完成探究任務的重要環節。當學生能夠互相肯定、彼此支持，分組合作就不只是把工作分出去，而是真正形成共同學習的歷程。</p>
+
+        <p>同時，SEL 也能幫助學生處理小組中的衝突。探究學習一定會出現意見不同，例如要選哪個變因、實驗步驟怎麼安排、資料要如何解釋，甚至誰要負責哪一項工作，都可能產生摩擦。我認為好的合作不是完全沒有衝突，而是學生能不能把衝突轉化成討論。SEL 可以幫助學生練習用比較成熟的方式表達意見，例如用「我觀察到……」、「我的想法是……」、「我的理由是……」來說明，而不是直接說「你錯了」或「我不要」。當學生能夠傾聽他人的想法，也能用證據和理由表達自己的觀點時，小組討論就會比較有品質，也比較接近真正的科學對話。</p>
+
+        <p>在科學態度方面，SEL 支持下的分組探究能幫助學生培養尊重證據、願意修正、持續好奇與負責任的學習態度。科學態度不只是喜不喜歡自然課，也不只是會不會操作器材，更包括能不能誠實紀錄、尊重實驗結果、聽取不同觀點，並根據證據修正原本的想法。學生在討論中如果能夠說出「我原本以為是這樣，但資料看起來不是」，這就是很珍貴的科學態度。SEL 提供的正向互動與情緒支持，能讓學生比較願意放下自己的固執，回到觀察、紀錄和數據本身來思考。</p>
+
+        <p>以科展或自然探究活動為例，這樣的影響會更加明顯。科展不是短時間的學習任務，而是一段長期、反覆修正、需要高度合作的探究歷程。學生在科展過程中，常常會遇到題目太大、實驗方法不夠精確、資料不足、結果不如預期，甚至組員之間對研究方向有不同看法。這時候，如果只強調研究成果，學生可能會把焦點放在得獎或完成作品，而忽略真正重要的學習歷程。但如果在科展指導中融入 SEL，老師就可以引導學生學會如何面對壓力、如何處理不同意見、如何在失敗後重新調整，也能讓學生理解每一次修改題目、重做實驗、補充紀錄，都是科學探究的一部分。</p>
+
+        <p>例如，有些學生一開始只想趕快做出結果，但當實驗失敗時，就容易互相責怪，認為是某個人操作錯誤，或是紀錄的人沒有做好。這時候，老師可以先引導學生暫停情緒反應，回到研究問題與實驗證據，請學生重新檢視變因控制、操作流程與紀錄方式。透過這樣的引導，學生會慢慢學會把情緒轉化為問題解決，把責怪轉化為共同修正。久而久之，他們不只實驗設計與資料分析能力會進步，合作方式也會更成熟，對科學研究的態度也會更踏實。</p>
+
+        <p>因此，對我來說，SEL 並不是額外加在科學探究之外的活動，而是支持學生進入深度探究的重要基礎。它讓學生在自然課或科展活動中，不只是學會科學知識與實驗技能，也學會如何與人合作、如何表達與傾聽、如何面對失敗，以及如何用證據和理性來修正自己的想法。當學生能在安全且支持的環境中進行分組探究，他們的探究能力會更完整，合作品質會更穩定，科學態度也會更成熟。</p>
+
+        <p>最後，我認為可以用三個重點來總結 SEL 支持下的分組探究學習模式。第一，SEL 讓學生有安全感，所以更敢提問與嘗試。學生願意提出問題、表達想法，才有機會真正進入探究。第二，SEL 讓小組合作從單純分工變成真正的共學。學生不只是完成自己的工作，而是學會互相傾聽、支持與共同解決問題。第三，SEL 讓學生在探究中學會尊重證據、面對失敗與持續修正。這些能力與態度，正是科學學習中最珍貴、也最值得被培養的核心素養。</p>
+
+        <p class="date">2026.06.30 賢宗</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
